@@ -6,8 +6,8 @@ public class Main {
         int total = 0;
         int i = 0;
         while (total <= 2_459_000) {
-            total = total + monthlyInvestment;
-            i = i+1;
+            total += monthlyInvestment;
+            i++;
             System.out.println("Месяц " + i + " сумма накоплений равна " + total + " рублей");
         }
 
@@ -15,7 +15,7 @@ public class Main {
         int start = 0;
         int finish = 10;
         while (start < 10) {
-            start ++;
+            start++;
             System.out.print(start + " ");
         }
         System.out.println();
@@ -30,9 +30,10 @@ public class Main {
         int fertility = population1 * 17;
         int mortality = population1 * 8;
         int totalGrowth = fertility - mortality;
+        int populationGrowth = 0;
         for (int y = 1; y <= 10; y ++) {
-            population = population + totalGrowth;
-            System.out.println("Год " + y + " численность населения составляет " + population);
+            populationGrowth += population + totalGrowth;
+            System.out.println("Год " + y + " численность населения составляет " + populationGrowth);
         }
         System.out.println("Домашнее задание - 2");
 
