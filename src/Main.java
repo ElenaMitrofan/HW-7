@@ -26,14 +26,13 @@ public class Main {
 
         System.out.println("Задание 3");
         int population = 12_000_000;
-        int population1 = population/1000;
-        int fertility = population1 * 17;
-        int mortality = population1 * 8;
-        int totalGrowth = fertility - mortality;
-        int populationGrowth = 0;
         for (int y = 1; y <= 10; y ++) {
-            populationGrowth += population + totalGrowth;
-            System.out.println("Год " + y + " численность населения составляет " + populationGrowth);
+            int population1 = population/1000;
+            int fertility = population1 * 17;
+            int mortality = population1 * 8;
+            int totalGrowth = fertility - mortality;
+            population += totalGrowth;
+            System.out.println("Год " + y + " численность населения составляет " + population);
         }
         System.out.println("Домашнее задание - 2");
 
@@ -41,7 +40,7 @@ public class Main {
         int depositAmount = 15000;
         int month = 1;
         while (depositAmount < 12_000_000) {
-            depositAmount =  depositAmount + depositAmount / 100 * 7;
+            depositAmount += depositAmount / 100 * 7;
             month++;
             System.out.println("Месяц " + month + " сумма накоплений равна " + depositAmount + " рублей");
         }
@@ -67,19 +66,17 @@ public class Main {
         }
 
         System.out.println("Задание 4");
-        int friday = 2;
-        for (; friday <= 31; friday += 7) {
+        for (int friday = 2; friday <= 31; friday += 7) {
                 System.out.println("Сегодня пятница, " + friday + "-е число. Необходимо подготовить отчет.");
 
         }
         System.out.println("Домашнее задание - 3");
 
         System.out.println("Задание 1");
-        int t = 0;
         int now = 2022;
         int future = now + 200;
         int past = now - 200;
-            for (; t <= future; t += 79) {
+            for (int t = 0; t <= future; t += 79) {
                 if (t >= past) {
                     System.out.println(t);
                 }
